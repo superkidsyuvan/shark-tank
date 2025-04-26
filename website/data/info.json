@@ -1,0 +1,42 @@
+{
+    "1" : {
+        "name" : "luo 🦉",
+        "description" : "Hi! I'm luodingo (luo for short)-- I love stalking people... and learning languages!",
+        "desc_elaborate" : "Si no practicas, ya verás lo que sucede",
+        "one_word_descriptor" : "español",
+        "image" : "../data/img/duo.jpg",
+        "stats" : null
+    },
+    "2" : {
+        "name" : "yublanathan",
+        "description" : "Chief Programmer and co-founder of Pantheon, Head in IT department and customer support.",
+        "desc_elaborate" : "umm basically a weird computer nerd i guess",
+        "one_word_descriptor" : "tank",
+        "image" : "../data/img/yublan.jpg",
+        "stats" : "../data/img/yublan_st.png"
+    },
+    "3" : {
+        "name" : "christofu",
+        "description" : "Financial advisor and accountant for Pantheon, manages invesments and creates company reports.",
+        "desc_elaborate" : "CHING CHONG; GET BAC TO WOOORK",
+        "one_word_descriptor" : "glass cannon",
+        "image" : "../data/img/chris.jpg",
+        "stats" : "../data/img/chris_st.png"
+    },
+    "4" : {
+        "name" : "rachael",
+        "description" : "Head in design and Founder of Pantheon, also leader of advertisment deparment.",
+        "desc_elaborate" : "13-year-old artist(?) and fabricator of universe who plays the clavicembalo col piano e forte in her freetime.",
+        "one_word_descriptor" : "bomber",
+        "image" : "../data/img/rachael.jpg",
+        "stats" : "../data/img/rachael_st.png"
+    },
+    "5" : {
+        "name" : "The Pantheon© Team",
+        "description" : "I fear this... is.. a.. group 😱",
+        "desc_elaborate" : "hi!",
+        "one_word_descriptor" : "group... probably",
+        "image" : "../data/img/group.jpg",
+        "stats" : null
+    }
+}

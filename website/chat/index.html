@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a page for a handy-dandy website to rent.. people!">
+        <meta name="keywords" content="Slavery, Rent, People">
+        <meta name="author" content="Yublanathan, Christofu, Rachael">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+        <title>Rent-A-Person</title>
+        <style>
+            @keyframes contract {
+                0% {width:100%; left:0%; right: 0%; border-radius: 0px; background-color: black;}
+                100%   {width:34%; left:33%; right: 0%; border-radius: 15px; background-color: antiquewhite;}
+            }
+            html, body {
+                background-color: #faebd7;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            inline {
+                position: absolute;
+                height: 100%;
+                left: 33%;
+                right: 33%;
+                top: 0%;
+                bottom: 0%;
+                border-radius: 15px;
+                width: 34%;
+                z-index: 10;
+            }
+            profile {
+                position: absolute;
+                height: 90%;
+                width: 100%;
+                bottom: 10%;
+                top: 0%;
+                right: 0%;
+                left: 0;
+                z-index: 9;
+            }
+            inset{
+                background-color: black;
+                z-index: 6;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                position: absolute;
+            }
+            
+            inset:hover {
+                background-size: calc(cover + 100px);
+            }
+            div.profile {
+                z-index: 7;
+                color: white;
+                position: absolute;
+                height: 20%;
+                top: 80%;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                margin: 5px;
+            }
+            taskbar {
+                border-top: 3px grey;
+                border-bottom: none;
+                border-right: none;
+                border-left: none;
+                position: absolute;
+                top: 90%;
+                bottom: 0%;
+                left: 0%;
+                right: 0%;
+                height: calc(10%- 10px);
+                background-color: white;
+            }
+            button {
+                position: absolute;
+                height: 100% ;
+                width: 33%;
+                padding: 5px;   
+                border: none;
+                background-color: transparent;
+            }
+            button.one {
+                left: 0%;
+            }
+            button.two {
+                left: 33.5%;
+            }
+            button.one {
+                left: 67%;
+            }
+            button:hover {
+                background-color: #f0f8ff;
+            }
+            img.icon-icon {
+                width: 50%;
+                height: 50%;
+            }
+            img.icon-icon:hover {
+                width: 55%;
+                height: 55%;
+            }
+            .animate {
+                animation-timing-function: ease-in-out;
+                animation-name: contract;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+            @media (min-width: 380px) {
+                .text-ws {
+                    width: 50%;
+                }
+            }
+            @media (max-width: 800px) {
+                inline{
+                    width: 100%;
+                    border-radius: 0px;
+                    left: 0%;
+                    right: 0%;
+                }
+                inset{
+                    width: 100%;
+                    border-radius: 0px;
+                }
+                @keyframes contract {
+                    0% {width:110%; left:-5%; right: -5%;}
+                    100%   {width:100%; left: 0%; right: 0%; }
+                }
+            }
+            @media (max-width: 500px) {
+                span, p {
+                    font-size: large;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <inline>
+            <profile>
+                <inset>
+                    
+                </inset>
+            </profile>
+            <taskbar>
+                <a href="./index.html?from_home=false" target="_self">
+                    <button class="one">
+                        <img src="../data/img/svg/message.svg" class="icon-icon" alt="icon.norm"></br>
+                        <span>Chat</span> 
+                    </button>
+                </a>
+                <a href="../auth/index.html?from_home=false" target="_self">
+                    <button class="two">
+                        <img src="../data/img/svg/user-group.svg" class="icon-icon" alt="icon.norm"></br>
+                        <span>Finder™</span> 
+                    </button>
+                </a>
+                <a href="../index.html?from_home=false" target="_self">
+                    <button class="three">
+                        <img src="../data/img/svg/house.svg" class="icon-icon" type="image/svg+xml" alt="icon.norm"></br>
+                        <span>Home</span> 
+                    </button>
+                </a>
+            </taskbar>
+        </inline>
+        <script>
+            if(window.location.href.toString().includes('?')==true){
+                let str = window.location.href.toString().split('?')[1]
+                if(str.includes('=') && str.includes('from_home') && !str.includes('!')){
+                    str = (str.split('=')[1]?.toLowerCase?.() === 'true');
+                    if(str == true){
+                        document.getElementsByTagName('inline')[0].classList.add("animate");
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>

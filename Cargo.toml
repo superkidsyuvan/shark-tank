@@ -1,0 +1,10 @@
+[[bin]]
+name = "daemon"
+path = "main.rs"
+
+[package]
+name = "web_server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

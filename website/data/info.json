@@ -1,42 +1,91 @@
 {
     "1" : {
-        "name" : "luo 🦉",
-        "description" : "Hi! I'm luodingo (luo for short)-- I love stalking people... and learning languages!",
-        "desc_elaborate" : "Si no practicas, ya verás lo que sucede",
-        "one_word_descriptor" : "español",
-        "image" : "../data/img/duo.jpg",
-        "stats" : null
-    },
-    "2" : {
-        "name" : "yublanathan",
-        "description" : "Chief Programmer and co-founder of Pantheon, Head in IT department and customer support.",
-        "desc_elaborate" : "umm basically a weird computer nerd i guess",
-        "one_word_descriptor" : "tank",
-        "image" : "../data/img/yublan.jpg",
-        "stats" : "../data/img/yublan_st.png"
-    },
-    "3" : {
         "name" : "christofu",
         "description" : "Financial advisor and accountant for Pantheon, manages invesments and creates company reports.",
         "desc_elaborate" : "CHING CHONG; GET BAC TO WOOORK",
         "one_word_descriptor" : "glass cannon",
-        "image" : "../data/img/chris.jpg",
-        "stats" : "../data/img/chris_st.png"
+        "image" : "../data/img/users/fullBody/chris.jpg",
+        "stats" : "../data/img/users/stats/chris_st.png",
+        "pantheon" : true
     },
-    "4" : {
+    "2" : {
         "name" : "rachael",
         "description" : "Head in design and Founder of Pantheon, also leader of advertisment deparment.",
         "desc_elaborate" : "13-year-old artist(?) and fabricator of universe who plays the clavicembalo col piano e forte in her freetime.",
         "one_word_descriptor" : "bomber",
-        "image" : "../data/img/rachael.jpg",
-        "stats" : "../data/img/rachael_st.png"
+        "image" : "../data/img/users/fullBody/rachael.jpg",
+        "stats" : "../data/img/users/stats/rachael_st.png",
+        "pantheon" : true
     },
-    "5" : {
+    "3" : {
+        "name" : "yublanathan",
+        "description" : "Chief Programmer and co-founder of Pantheon, Head in IT department and customer support.",
+        "desc_elaborate" : "umm basically a weird computer nerd i guess",
+        "one_word_descriptor" : "tank",
+        "image" : "../data/img/users/fullBody/yublan.jpg",
+        "stats" : "../data/img/users/stats/yublan_st.png",
+        "pantheon" : true
+    },
+    "4" : {
         "name" : "The Pantheon© Team",
         "description" : "I fear this... is.. a.. group 😱",
         "desc_elaborate" : "hi!",
         "one_word_descriptor" : "group... probably",
-        "image" : "../data/img/group.jpg",
-        "stats" : null
+        "image" : "../data/img/users/fullBody/group.jpg",
+        "pantheon" : false
+    },
+    "5" : {
+        "name" : "luo 🦉",
+        "description" : "Hi! I'm luodingo (luo for short)-- I love stalking people... and learning languages!",
+        "desc_elaborate" : "Si no practicas, ya verás lo que sucede",
+        "one_word_descriptor" : "español",
+        "image" : "../data/img/users/fullBody/duo.jpg",
+        "pantheon" : false
+    },
+    "6" : {
+        "name" : "Hank",
+        "description" : "This is a description",
+        "image" : "../data/img/users/fullBody/hank.jpg",
+        "pantheon" : false
+    },
+    "7" : {
+        "name" : "The Battle of Lexington & Concord",
+        "description" : "This is a description",
+        "image" : "../data/img/users/fullBody/lexington.jpg",
+        "pantheon" : false
+    },
+    "8" : {
+        "name" : "Avid",
+        "description" : "The IT guy",
+        "image" : "../data/img/users/fullBody/avid.jpg",
+        "pantheon" : false
+    },
+    "9" : {
+        "name" : "Zach",
+        "description" : "This is a description",
+        "closeUp" : "../data/img/users/closeUp/zach.jpg",
+        "image" : "../data/img/users/fullBody/zach.jpg",
+        "pantheon" : false
+    },
+    "10" : {
+        "name" : "Alzheimer's",
+        "description" : "This is a description",
+        "closeUp" : "../data/img/users/closeUp/alzheimer.jpg",
+        "image" : "../data/img/users/fullBody/alzheimer.jpg",
+        "pantheon" : false
+    },
+    "11" : {
+        "name" : "Dementia",
+        "description" : "This is a description",
+        "closeUp" : "../data/img/users/closeUp/dementia.jpg",
+        "image" : "../data/img/users/fullBody/dementia.jpg",
+        "pantheon" : false
+    },
+    "12" : {
+        "name" : "Schizophrenia",
+        "description" : "This is a description",
+        "closeUp" : "../data/img/users/closeUp/schizophrenia.jpg",
+        "image" : "../data/img/users/fullBody/schizophrenia.jpg",
+        "pantheon" : false
     }
 }

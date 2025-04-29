@@ -195,6 +195,21 @@
                 animation-duration: 1s;
                 animation-fill-mode: forwards;
             }
+            .ribbon {
+                width: fit-content;
+                height: 10px;
+                font-size: 9px;
+                padding: 4px;
+                left: 57%;
+                top: 5%;
+                position: absolute;
+                text-align: center;
+                border-radius: 25px;
+                transform: rotate(20deg);
+                background-color: #ff0000;
+                color: white;
+                display: none;
+            }
             @media (min-width: 380px) {
                 .text-ws {
                     width: 50%;
@@ -295,7 +310,9 @@
             <taskbar>
                 <a href="../chat/index.html?from_home=false" target="_self">
                     <button class="one">
-                        <img src="../data/img/svg/message.svg" class="icon-icon" alt="icon.norm"></br>
+                        <img src="../data/img/svg/message.svg" class="icon-icon" alt="icon.norm">
+                        <span class="ribbon">0</span>
+                        </br>
                         <span>Chat</span> 
                     </button>
                 </a>
@@ -314,11 +331,12 @@
             </taskbar>
         </inline>
         <hitbox right>
-            <button right onclick="changeShown()">
+            <button right onclick="changeShown(); addCounter();">
                 <img src="../data/img/svg/arrow-right.svg" class="icon-icon auxillary" alt="icon.norm"></br>
             </button>
         </hitbox>
         <script>
+            var lastIndex = ["1","2","3","4"]
             var selected = "1"
             var data = null;
             const xhttp = new XMLHttpRequest();
@@ -335,19 +353,42 @@
             xhttp.open("GET", "../data/info.json");
             xhttp.send();
 
-            function changeShown() {
+            function isInDataSet(y){
+                var x = parseInt(y,10)
+                if(x >= 1 && x <= ((Object.keys(data).length) + 1))  {
+                    return lastIndex.includes(y);
+                } else {
+                    return false
+                }
+            }
+
+            function addToDataSet(x){
+                if(lastIndex.length >= Math.ceil((Object.keys(data).length) - 1)){
+                    lastIndex.splice(0,1);
+                }
+                lastIndex.push(x);
+            }
+
+            function changeShown(x) {
                 if(data != (null || undefined)){
                     var proposition = (Math.floor(Math.random() * Object.keys(data).length) + 1).toString();
-                    if (proposition == selected) {
+                    console.log(proposition)
+                    if (proposition == selected || isInDataSet(proposition)) {
                         changeShown()
                     } else {
                         selected = proposition
+                        addToDataSet(selected)
                         document.getElementsByClassName('bold')[0].innerHTML = data[selected].name
                         document.querySelector('p').innerHTML = data[selected].description
                         document.getElementsByTagName('inset')[0].style.backgroundImage= `url(${data[selected].image})`;
                         console.log(`item changed to: ${data[selected].name}`)
                     }
                 }
+            }
+
+            function addCounter() {
+                document.getElementsByClassName("ribbon")[0].style.display='block';
+                document.getElementsByClassName("ribbon")[0].innerHTML=(parseInt(document.getElementsByClassName("ribbon")[0].innerHTML,10)+1)
             }
 
             if(window.location.href.toString().includes('?')==true){

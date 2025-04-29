@@ -1,5 +1,5 @@
 [[bin]]
-name = "daemon"
+name = "pantheon-daemon"
 path = "main.rs"
 
 [package]

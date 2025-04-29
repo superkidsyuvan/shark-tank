@@ -1,7 +1,7 @@
 # shark tank!!! 🦈
 *yes, this is a school project.*
 
-![The Crew of Pantheon](https://raw.githubusercontent.com/superkidsyuvan/shark-tank/refs/heads/main/website/data/img/group.jpg)
+![The Crew of Pantheon](https://raw.githubusercontent.com/superkidsyuvan/shark-tank/refs/heads/main/website/data/img/users/fullBody/group.jpg)
 The pantheon (crew), including [me](https://www.github.com/superkidsyuvan), [christofu (@Eeveeco - github)](https://www.github.com/eeveeco), and rachael (no link yet 😢)
 
 yall can find more of the project information [here](https://sites.google.com/k12.friscoisd.org/pantheon)

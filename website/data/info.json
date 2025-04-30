@@ -69,23 +69,30 @@
     },
     "10" : {
         "name" : "Alzheimer's",
-        "description" : "This is a description",
+        "description" : "hello my name is uhh uhhh my name is uhh i like long beach 🪼🪼🪼",
         "closeUp" : "../data/img/users/closeUp/alzheimer.jpg",
         "image" : "../data/img/users/fullBody/alzheimer.jpg",
         "pantheon" : false
     },
     "11" : {
         "name" : "Dementia",
-        "description" : "This is a description",
+        "description" : "hi my name is Whitten hi my name is Whitten hi my name is Whitten",
         "closeUp" : "../data/img/users/closeUp/dementia.jpg",
         "image" : "../data/img/users/fullBody/dementia.jpg",
         "pantheon" : false
     },
     "12" : {
         "name" : "Schizophrenia",
-        "description" : "This is a description",
+        "description" : "...I should be put in a mental asylum 🤪",
         "closeUp" : "../data/img/users/closeUp/schizophrenia.jpg",
         "image" : "../data/img/users/fullBody/schizophrenia.jpg",
+        "pantheon" : false
+    },
+    "13" : {
+        "name" : "Avid 2.0",
+        "description" : "I'm not doing drugs (totally)",
+        "closeUp" : "../data/img/users/closeUp/avid2.jpg",
+        "image" : "../data/img/users/fullBody/avid2.jpg",
         "pantheon" : false
     }
 }

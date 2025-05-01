@@ -52,11 +52,13 @@
         "name" : "The Battle of Lexington & Concord",
         "description" : "This is a description",
         "image" : "../data/img/users/fullBody/lexington.jpg",
+        "closeUp" : "../data/img/users/fullBody/lexi.jpg",
         "pantheon" : false
     },
     "8" : {
         "name" : "Avid",
         "description" : "The IT guy",
+        "closeUp" : "../data/img/users/fullBody/adiv.jpg",
         "image" : "../data/img/users/fullBody/avid.jpg",
         "pantheon" : false
     },
@@ -93,6 +95,13 @@
         "description" : "I'm not doing drugs (totally)",
         "closeUp" : "../data/img/users/closeUp/avid2.jpg",
         "image" : "../data/img/users/fullBody/avid2.jpg",
+        "pantheon" : false
+    },
+    "14" : {
+        "name" : "Katie",
+        "description" : "#bestseller",
+        "closeUp" : "../data/img/users/closeUp/katie.jpg",
+        "image" : "../data/img/users/fullBody/katie.jpg",
         "pantheon" : false
     }
 }

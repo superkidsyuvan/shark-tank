@@ -140,6 +140,21 @@
                 animation-duration: 1s;
                 animation-fill-mode: forwards;
             }
+            .ribbon {
+                width: fit-content;
+                height: 10px;
+                font-size: 9px;
+                padding: 4px;
+                left: 57%;
+                top: 5%;
+                position: absolute;
+                text-align: center;
+                border-radius: 25px;
+                transform: rotate(20deg);
+                background-color: #ff0000;
+                color: white;
+                display: none;
+            }
             .icon-icon3 {
                 position: absolute;
                 width: 75%;
@@ -169,36 +184,79 @@
                 background-color: #ffffff;
                 padding: 15px;
                 overflow: hidden;
+                /*display: none;*/
+            }
+            .pfp-pic {
+                position: relative;
+                height: 90%;
+                width: 50px;
+                top: 0%;
+                bottom: 0%;
+                left: 5%;
+                right: calc(100% - 50px);
+                border-radius: 100%;
+                padding: none;
+                margin: none;
+            }
+            .caption2 {
+                color: #808080;
+            }
+            .title {
+                position: absolute;
+                font-weight: bold;
+            }
+            a {
+                color: #000000;
+            }
+            .circle-notify {
+                position: relative;
+                bottom: 50%;
+                top: 50%;
+                width: 5px;
+                height: 5px;
+                left: 0%;
+                border-radius: 100%;
+                color: #ffffff;
+                background-color: #ff0000;
+                padding: none;
+                margin: none;
+            } 
+            scroll-box {
+                background-color: white;
+                overflow: scroll;
+                height: 90%;
+                width: 100%;
+                z-index: 8;
+            }
+            .linear {
+                position: absolute;
+                width: 75%;
+                height: 100%;
+                left: 25%;
+                right: 0%;
+                top: 0%;
+                bottom: 0%;
+                background-color: transparent;
                 border-bottom: 1px solid #808080;
                 border-top: none;
                 border-right: none;
                 border-left: none;
-                z-index: 10;
+                z-index: 8;
             }
-            .x-offset {
-                position: absolute;
-                left: calc(15% + 50px);
-                width: calc(100% - (15% + 50px));
-                height: 100%;
-                top: 0%;
-                padding: 15px;
-            }
-            .pfp-pic {
+            .side {
                 position: relative;
-                height: 80%;
-                width: 50px;
-                top: 10%;
-                bottom: 10%;
-                left: 5%;
-                right: 75%;
-                border-radius: 50px;
+                left: 60%;
             }
-            .caption2 {
-                position: relative;
-                color: #808080;
+            .sider {
+                float: right;
+                margin-right: 5%;
+                width: 5%;
+                height: 20%;
+                filter: invert(.5);
             }
-            .title {
-                margin-top: 10px;
+            .sider:hover {
+                width: 6%;
+                height: 21%;
             }
             @media (min-width: 380px) {
                 .text-ws {
@@ -238,23 +296,20 @@
                             <img src="../data/img/svg/message.svg" class="icon-icon2" type="image/svg+xml" alt="icon.norm"></br>
                         </center>
                     </header>
-                    <lonely>
-                        <img src="../data/img/svg/face-frown.svg" class="icon-icon3" type="image/svg+xml" alt="icon.norm">
-                        <span class="caption">No messages yet. Make a few matches to spruce up your inbox!</span>
-                    </lonely>
-                    <!--<div chatBar>
-                        <img src="../data/img/users/closeUp/dementia.jpg" class="pfp-pic">
-                        <div class="x-offset">
-                            <span class="title">Profile.name</span></br>
-                            <span class="caption2">Profile.chatMessage</span>
-                        </div>
-                    </div>/!-->
+                    <scroll-box>
+                        <lonely>
+                            <img src="../data/img/svg/face-frown.svg" class="icon-icon3" type="image/svg+xml" alt="icon.norm">
+                            <p class="caption">It looks like you've disabled javascript on this webpage... due to this, we are unable to operate this website. Please enable this setting to get the best experience.</p>
+                        </lonely>
+                    </scroll-box>
                 </inset>
             </profile>
             <taskbar>
                 <a href="./index.html?from_home=false" target="_self">
                     <button class="one">
-                        <img src="../data/img/svg/message.svg" class="icon-icon" alt="icon.norm"></br>
+                        <img src="../data/img/svg/message.svg" class="icon-icon" alt="icon.norm">
+                        <span class="ribbon">0</span>
+                        </br>
                         <span>Chat</span> 
                     </button>
                 </a>
@@ -273,6 +328,43 @@
             </taskbar>
         </inline>
         <script>
+            var data = null;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                data = JSON.parse(this.response);
+                console.log(data);
+                if (document.cookie == '' || document.cookie == null || document.cookie == undefined ) {
+                    document.querySelector('p').innerHTML = "No messages yet. Make a few matches to spruce up your inbox!";
+                } else {
+                    document.getElementsByTagName('lonely')[0].remove()
+                    var cookie = document.cookie;
+                    if(cookie.includes('notifications') && cookie.includes('=')) {
+                        var json = JSON.parse(cookie.split('=')[1])
+                        for(let i = 0; i < json.length; i++ ){
+                            console.log(json[i]);
+                        }
+                    }
+                }
+            }
+            xhttp.onerror = function() {
+                document.querySelector('p').innerHTML = "It looks like CORS is enabled on this webpage... due to this, we are unable to operate this website. Please disable this setting to get the best experience.";
+            }
+            xhttp.open("GET", "../data/info.json");
+            xhttp.send();
+
+            /* WIP - make "dynamic" web elements to the following: 
+
+            <div chatBar>
+                <div class="circle-notify"></div>
+                <img src="../data/img/users/closeUp/dementia.jpg" class="pfp-pic">
+                <div class="linear">
+                    </br><span class="title">Profile.name</span><span class="caption2 side">12:00AM</span> <img src="../data/img/svg/chevron-right.svg" class="sider" type="image/svg+xml" alt="icon.norm">
+                    </br><span class="caption2">Profile.chatMessage</span>
+                </div>
+            </div>
+
+            */
+
             if(window.location.href.toString().includes('?')==true){
                 let str = window.location.href.toString().split('?')[1]
                 if(str.includes('=') && str.includes('from_home') && !str.includes('!')){

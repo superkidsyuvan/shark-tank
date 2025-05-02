@@ -66,6 +66,7 @@
                 background-color: #ffffff;
                 padding: 15px;
                 overflow: hidden;
+                height: 5%;
                 box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
                 z-index: 11;
             }
@@ -104,6 +105,7 @@
                 left: 0%;
                 right: 0%;
                 height: 10%;
+                z-index: 10;
                 background-color: white;
             }
             button {
@@ -174,7 +176,7 @@
                 height: 20%;
                 color: #808080;
             }
-            div[chatBar] {
+            .chatBar {
                 height: 10%;
                 position: relative;
                 top: 0%;
@@ -184,6 +186,7 @@
                 background-color: #ffffff;
                 padding: 15px;
                 overflow: hidden;
+                z-index: 9;
                 /*display: none;*/
             }
             .pfp-pic {
@@ -221,12 +224,13 @@
                 padding: none;
                 margin: none;
             } 
-            scroll-box {
-                background-color: white;
-                overflow: scroll;
-                height: 90%;
+            .scroll-box {
+                background-color: transparent;
+                overflow-y: auto;
+                overflow-x: hidden;
+                height: 92%;
                 width: 100%;
-                z-index: 8;
+                z-index: 7;
             }
             .linear {
                 position: absolute;
@@ -237,11 +241,10 @@
                 top: 0%;
                 bottom: 0%;
                 background-color: transparent;
-                border-bottom: 1px solid #808080;
-                border-top: none;
-                border-right: none;
+                border: 1px solid #808080;
                 border-left: none;
-                z-index: 8;
+                border-right: none;
+                z-index: 10;
             }
             .side {
                 position: relative;
@@ -296,12 +299,12 @@
                             <img src="../data/img/svg/message.svg" class="icon-icon2" type="image/svg+xml" alt="icon.norm"></br>
                         </center>
                     </header>
-                    <scroll-box>
+                    <div class="scroll-box">
                         <lonely>
                             <img src="../data/img/svg/face-frown.svg" class="icon-icon3" type="image/svg+xml" alt="icon.norm">
                             <p class="caption">It looks like you've disabled javascript on this webpage... due to this, we are unable to operate this website. Please enable this setting to get the best experience.</p>
                         </lonely>
-                    </scroll-box>
+                    </div>
                 </inset>
             </profile>
             <taskbar>
@@ -341,7 +344,7 @@
                     if(cookie.includes('notifications') && cookie.includes('=')) {
                         var json = JSON.parse(cookie.split('=')[1])
                         for(let i = 0; i < json.length; i++ ){
-                            console.log(json[i]);
+                            addBar(json[i]);
                         }
                     }
                 }
@@ -352,11 +355,11 @@
             xhttp.open("GET", "../data/info.json");
             xhttp.send();
 
-            /* WIP - make "dynamic" web elements to the following: 
+            /* The next func makes the following:
 
-            <div chatBar>
+            <div class="chatBar">
                 <div class="circle-notify"></div>
-                <img src="../data/img/users/closeUp/dementia.jpg" class="pfp-pic">
+                <img src="../data/img/users/closeUp/dementia.jpg" class="pfp-pic" alt="pfp-pic">
                 <div class="linear">
                     </br><span class="title">Profile.name</span><span class="caption2 side">12:00AM</span> <img src="../data/img/svg/chevron-right.svg" class="sider" type="image/svg+xml" alt="icon.norm">
                     </br><span class="caption2">Profile.chatMessage</span>
@@ -364,6 +367,52 @@
             </div>
 
             */
+
+            function addBar(x) {
+                var chatBar = document.createElement("div");
+                chatBar.classList.add("chatBar");
+                var circle = document.createElement("div");
+                circle.classList.add("circle-notify");
+                var img = document.createElement("img");
+                img.classList.add("pfp-pic");
+                img.src = data[x].closeUp;
+                img.onerror = function() {
+                    this.src = data[x].image;
+                };
+                img.alt = "pfp-pic";
+                var lin = document.createElement("div");
+                lin.classList.add("linear");
+                var til = document.createElement("span");
+                til.classList.add("title");
+                if(data[x].name.length >= 25) {
+                    til.innerHTML = `${(data[x].name).substring(0, 22)}...`
+                } else {
+                    til.innerHTML = data[x].name
+                }
+                var cap = document.createElement("span");
+                cap.classList.add("caption2");
+                cap.classList.add("side");
+                const date = new Date();
+                cap.innerHTML = `${date.getHours()}:${date.getMinutes()}`
+                var chev = document.createElement("img");
+                chev.classList.add("sider");
+                chev.src = "../data/img/svg/chevron-right.svg";
+                chev.type = "image/svg+xml";
+                chev.alt = "icon.norm";
+                var cap2 = document.createElement("span");
+                cap2.classList.add("caption2");
+                cap2.innerHTML = `Hi! My name is ${data[x].name}.`;
+                chatBar.appendChild(circle);
+                chatBar.appendChild(img);
+                chatBar.appendChild(lin);
+                lin.appendChild(document.createElement("br"));
+                lin.appendChild(til);
+                lin.appendChild(cap);
+                lin.appendChild(chev);
+                lin.appendChild(document.createElement("br"));
+                lin.appendChild(cap2);
+                document.getElementsByClassName("scroll-box")[0].appendChild(chatBar);
+            }
 
             if(window.location.href.toString().includes('?')==true){
                 let str = window.location.href.toString().split('?')[1]
@@ -373,6 +422,11 @@
                         document.getElementsByTagName('inline')[0].classList.add("animate");
                     }
                 }
+            }
+
+            if((document.cookie).includes("notifications")){
+                document.getElementsByClassName("ribbon")[0].innerHTML = JSON.parse(document.cookie.split('=')[1]).length;
+                document.getElementsByClassName("ribbon")[0].style.display = 'block';
             }
         </script>
     </body>

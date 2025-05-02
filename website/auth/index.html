@@ -213,6 +213,20 @@
             a {
                 color: #000000;
             }
+            .ribbon2 {
+                width: 60px;
+                font-size: 14px;
+                padding: 4px;
+                position: absolute;
+                right: -45px;
+                top: -12px;
+                text-align: center;
+                border-radius: 25px;
+                transform: rotate(20deg);
+                background-color: #ff9800;
+                color: white;
+                display: none;
+            }
             @media (min-width: 380px) {
                 .text-ws {
                     width: 50%;
@@ -296,7 +310,7 @@
     </head>
     <body>
         <hitbox left>
-            <button left onclick="changeShown()">
+            <button left onclick="changeShown(false)">
                 <img src="../data/img/svg/arrow-left.svg" class="icon-icon auxillary" alt="icon.norm"></br>
             </button>
         </hitbox>
@@ -307,6 +321,7 @@
                     <div class="profile">
                         <span class="bold">Oh Noes!</span>
                         <p>It looks like you've disabled javascript on this webpage... due to this, we are unable to operate this website. Please enable this setting to get the best experience.</p>
+                        <span class="ribbon2">BEST SELLER</span>
                     </div>
                 </inset>
             </profile>
@@ -334,7 +349,7 @@
             </taskbar>
         </inline>
         <hitbox right>
-            <button right onclick="changeShown(); addCounter();">
+            <button right onclick="changeShown(true)">
                 <img src="../data/img/svg/arrow-right.svg" class="icon-icon auxillary" alt="icon.norm"></br>
             </button>
         </hitbox>
@@ -373,25 +388,43 @@
             }
 
             function changeShown(x) {
+                if (x == true) {
+                    addCounter();
+                }
                 if(data != (null || undefined)){
                     var proposition = (Math.floor(Math.random() * Object.keys(data).length) + 1).toString();
                     console.log(proposition)
                     if (proposition == selected || isInDataSet(proposition)) {
                         changeShown()
                     } else {
+                        if(selected == "14"){
+                            document.getElementsByClassName('ribbon2')[0].style.display = "none";
+                        }
                         selected = proposition
                         addToDataSet(selected)
                         document.getElementsByClassName('bold')[0].innerHTML = data[selected].name
                         document.querySelector('p').innerHTML = data[selected].description
                         document.getElementsByTagName('inset')[0].style.backgroundImage= `url(${data[selected].image})`;
-                        console.log(`item changed to: ${data[selected].name}`)
+                        console.log(`item changed to: ${data[selected].name}`);
+                        if(proposition == "14"){
+                            document.getElementsByClassName('ribbon2')[0].style.display = "block";
+                        }
                     }
                 }
             }
 
             function addCounter() {
-                document.getElementsByClassName("ribbon")[0].style.display='block';
-                document.getElementsByClassName("ribbon")[0].innerHTML=(parseInt(document.getElementsByClassName("ribbon")[0].innerHTML,10)+1)
+                if(!(document.cookie.includes("notifications"))) {
+                    document.cookie = `notifications=["${selected}"]; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/`
+                } else {
+                    //if(!((Object.keys(data).length) <= JSON.parse(document.cookie.split('=')[1]).length)) { }
+                    if (!(JSON.parse(document.cookie.split('=')[1]).includes(selected))) {
+                        document.cookie = `${document.cookie.slice(0,-1)},"${selected}"]; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/`
+                    }
+                }
+
+                document.getElementsByClassName("ribbon")[0].style.display = 'block';
+                document.getElementsByClassName("ribbon")[0].innerHTML = JSON.parse(document.cookie.split('=')[1]).length;
             }
 
             if(window.location.href.toString().includes('?')==true){
@@ -404,6 +437,10 @@
                 }
             }
 
+            if((document.cookie).includes("notifications")){
+                document.getElementsByClassName("ribbon")[0].innerHTML = JSON.parse(document.cookie.split('=')[1]).length;
+                document.getElementsByClassName("ribbon")[0].style.display = 'block';
+            }
         </script>
     </body>
 </html>

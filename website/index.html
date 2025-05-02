@@ -186,6 +186,10 @@
                     }
                 }
             }
+            if((document.cookie).includes("notifications")){
+                document.getElementsByClassName("ribbon")[0].innerHTML = JSON.parse(document.cookie.split('=')[1]).length;
+                document.getElementsByClassName("ribbon")[0].style.display = 'block';
+            }
         </script>
     </body>
 </html>

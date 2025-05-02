@@ -52,13 +52,13 @@
         "name" : "The Battle of Lexington & Concord",
         "description" : "This is a description",
         "image" : "../data/img/users/fullBody/lexington.jpg",
-        "closeUp" : "../data/img/users/fullBody/lexi.jpg",
+        "closeUp" : "../data/img/users/closeUp/lexi.jpg",
         "pantheon" : false
     },
     "8" : {
         "name" : "Avid",
         "description" : "The IT guy",
-        "closeUp" : "../data/img/users/fullBody/adiv.jpg",
+        "closeUp" : "../data/img/users/closeUp/adiv.jpg",
         "image" : "../data/img/users/fullBody/avid.jpg",
         "pantheon" : false
     },

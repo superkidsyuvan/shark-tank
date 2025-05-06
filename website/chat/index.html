@@ -10,8 +10,8 @@
         <title>Rent-A-Person</title>
         <style>
             @keyframes contract {
-                0% { width:100%; left:0%; right: 0%; border-radius: 0px; }
-                100%   { width:34%; left:33%; right: 0%; border-radius: 15px; }
+                0% { width:100%; left:0%; right: 0%; border-radius: 0px;}
+                100%   { width:34%; left:33%; right: 0%; border-radius: 15px;}
             }
             html, body {
                 background-color: #faebd7;
@@ -189,6 +189,9 @@
                 z-index: 9;
                 /*display: none;*/
             }
+            .chatBar:hover {
+                background-color: #f0f8ff;
+            }
             .pfp-pic {
                 position: relative;
                 height: 90%;
@@ -207,6 +210,10 @@
             .title {
                 position: absolute;
                 font-weight: bold;
+                width: 50%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
             a {
                 color: #000000;
@@ -245,6 +252,9 @@
                 border-left: none;
                 border-right: none;
                 z-index: 10;
+            }
+            .noTop {
+                border-top: none !important;
             }
             .side {
                 position: relative;
@@ -344,7 +354,7 @@
                     if(cookie.includes('notifications') && cookie.includes('=')) {
                         var json = JSON.parse(cookie.split('=')[1])
                         for(let i = 0; i < json.length; i++ ){
-                            addBar(json[i]);
+                            addBar(json[i],i);
                         }
                     }
                 }
@@ -368,7 +378,9 @@
 
             */
 
-            function addBar(x) {
+            function addBar(x,i) {
+                var a = document.createElement("a")
+                a.href = `./index.html?from_home=false&chat=${x}`
                 var chatBar = document.createElement("div");
                 chatBar.classList.add("chatBar");
                 var circle = document.createElement("div");
@@ -382,13 +394,12 @@
                 img.alt = "pfp-pic";
                 var lin = document.createElement("div");
                 lin.classList.add("linear");
+                if(i==0){
+                    lin.classList.add("noTop")
+                }
                 var til = document.createElement("span");
                 til.classList.add("title");
-                if(data[x].name.length >= 25) {
-                    til.innerHTML = `${(data[x].name).substring(0, 22)}...`
-                } else {
-                    til.innerHTML = data[x].name
-                }
+                til.innerHTML = data[x].name
                 var cap = document.createElement("span");
                 cap.classList.add("caption2");
                 cap.classList.add("side");
@@ -402,6 +413,7 @@
                 var cap2 = document.createElement("span");
                 cap2.classList.add("caption2");
                 cap2.innerHTML = `Hi! My name is ${data[x].name}.`;
+                a.appendChild(chatBar)
                 chatBar.appendChild(circle);
                 chatBar.appendChild(img);
                 chatBar.appendChild(lin);
@@ -411,16 +423,30 @@
                 lin.appendChild(chev);
                 lin.appendChild(document.createElement("br"));
                 lin.appendChild(cap2);
-                document.getElementsByClassName("scroll-box")[0].appendChild(chatBar);
+                document.getElementsByClassName("scroll-box")[0].appendChild(a);
             }
 
-            if(window.location.href.toString().includes('?')==true){
-                let str = window.location.href.toString().split('?')[1]
+            function processParameter(str){
                 if(str.includes('=') && str.includes('from_home') && !str.includes('!')){
                     str = (str.split('=')[1]?.toLowerCase?.() === 'true');
                     if(str == true){
                         document.getElementsByTagName('inline')[0].classList.add("animate");
                     }
+                } else if(str.includes('=') && str.includes('chat') && !str.includes('!')){
+                    str = str.split('=')[1]
+                    console.log(`initiated chat with: ${str}`);
+                }
+            }
+
+            if(window.location.href.toString().includes('?')==true){
+                let str = window.location.href.toString().split('?')[1]
+                if (str.includes('&') == true) {
+                    var par = str.split('&');
+                    for(let i = 0; i < par.length; i++) {
+                        processParameter(par[i]);
+                    }
+                } else {
+                    processParameter(str);
                 }
             }
 

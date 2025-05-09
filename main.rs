@@ -1,4 +1,6 @@
 use std::{io::{BufRead, Write}, path::Path};
+use urlencoding::encode;
+
 fn main() {
     let listener: std::net::TcpListener = std::net::TcpListener::bind("127.0.0.1:9999").unwrap();
     for mut stream in listener.incoming().flatten() {
@@ -23,7 +25,12 @@ fn main() {
                 println!("{}",p.clone().into_os_string().into_string().unwrap());
                 if Path::new(&p).exists() {
                     stream.write_all(b"HTTP/1.1 200 OK\r\n\r\n").unwrap();
-                    stream.write_all(&std::fs::read(p).unwrap()).unwrap();
+                    if resource.ends_with(".svg") {
+                        stream.write_all(b"data:image/svg+xml;utf8,").unwrap();
+                        stream.write_all(encode(&std::fs::read_to_string(p).unwrap()).into_owned().trim().as_bytes()).unwrap();
+                    } else {
+                        stream.write_all(&std::fs::read(p).unwrap()).unwrap();
+                    }
                 } else {
                     stream.write_all(b"HTTP/1.1 404 Not Found\r\n\r\n").unwrap();
                 }

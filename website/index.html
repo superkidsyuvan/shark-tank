@@ -13,12 +13,14 @@
                 0%   {width:34%; left:33%; right: 0%; border-radius: 15px; background-color: #ffffff;}
                 100% {width:100%; left:0%; right: 0%; border-radius: 0px; background-color: transparent;}
             }
+
             html, body {
                 background-color: #faebd7;
                 max-width: 100%;
                 overflow-x: hidden;
                 font-family: Arial, sans-serif;
             }
+
             inline {
                 position: absolute;
                 height: 100%;
@@ -34,6 +36,7 @@
                 right: 0%;
                 border-radius: 0px;
             }
+
             profile {
                 position: absolute;
                 height: 90%;
@@ -44,6 +47,7 @@
                 left: 0;
                 z-index: 9;
             }
+
             inset{
                position: absolute;
                overflow-x: hidden;
@@ -57,6 +61,7 @@
                right: 5%;
                padding-left: 5px;
             }
+
             h1 {
                 position: relative;
                 left: 5%;
@@ -66,15 +71,21 @@
                 display: inline;
                 text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
             }
-            img.icon-icon-favicon {
+
+            img.icon-icon-inline {
                 display:inline-block;
                 height:1em;
                 width:auto;
+            }
+
+            img.icon-icon-favi {
                 transform:translate(0, 0.1em);
             }
-            img.icon-icon-favicon:hover {
+            
+            img.icon-icon-favi:hover, img.icon-icon7:hover {
                 filter: invert(.5);
             }
+
             div.profile {
                 z-index: 7;
                 color: white;
@@ -87,9 +98,11 @@
                 border-bottom-right-radius: 0px;
                 margin: 5px;
             }
+
             span.bold {
                 font-weight: bold;
             }
+
             taskbar {
                 border-top: 3px grey;
                 border-bottom: none;
@@ -103,6 +116,7 @@
                 height: calc(10%- 10px);
                 background-color: white;
             }
+
             button {
                 position: absolute;
                 height: 100% ;
@@ -111,57 +125,71 @@
                 border: none;
                 background-color: transparent;
             }
+
             button.employer {
                 position: relative;
                 width: 90%;
                 left: 5%;
                 right: 5%;
                 margin: 5px;
+                height: 25px;
             }
+
             button.filled {
                 background-color: #313d5a;
                 color: #ffffff;
                 border-radius: 5px;
                 margin-top: 30px;
             }
+
             button.filled:hover {
                 box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
                 background-color: #313d5a !important;
             }
+
             button.hollow {
                 background-color: #ffffff;
                 color: #313d5a;
                 border: 2px solid #313d5a;
             }
+
             button.hollow:hover {
                 background-color: #f0f8ff;
             }
+
             .one {
                 left: 0%;
             }
+
             .two {
                 left: 33.5%;
             }
+
             .three {
                 left: 67%;
             }
+
             button:hover {
                 background-color: #f0f8ff;
             }
+
             img.icon-icon {
                 width: 50%;
                 height: 50%;
             }
+
             img.icon-icon:hover {
                 width: 55%;
                 height: 55%;
             }
+
             .animate {
                 animation-timing-function: ease-in-out;
                 animation-name: expand;
                 animation-duration: .4s;
                 animation-fill-mode: forwards;
             }
+
             .ribbon {
                 width: fit-content;
                 height: 10px;
@@ -177,17 +205,22 @@
                 color: white;
                 display: none;
             }
+
             p {
                 margin-top: 5px;
             }
+
             .container {
                 width: 70%;
                 height: 90%;
             }
+
             .video {
                 width: 100%;
                 height: 100%;
+                background-color: #000000;
             }
+
             .sign-up {
                 position: fixed;
                 float: right;
@@ -195,7 +228,9 @@
                 right: 7.25%;
                 top: 14.9%;
                 z-index: 12;
+                height: 100%;
             }
+
             .header::after {
                 position: relative;
                 width: 0;
@@ -209,16 +244,19 @@
                 top: 27px;
                 left: calc(50% - 10px);
             }
+
             h2 {
                 color: #d5573b;
                 margin-top: none;
             }
+            
             .header {
                 position: relative;
                 background-color: #313d5a;
                 color: #ffffff;
                 padding-top: none;
             }
+
             .pager {
                 width: 100%;
                 height: 100%;
@@ -226,33 +264,39 @@
                 position: relative;
                 padding: 5px;
             }
+
             dramaticize {
                 color: white !important;
                 text-shadow: 2px 2px 4px orange;
             }
+
             a.disguised {
                 color: #000000;
             }
+
             .container {
                 position: relative;
                 width: 70%;
                 height: 90%;
             }
+
             .quotes {
                 position: relative;
                 border: none;
                 width: 100%;
-                top: 25%;
-                height: 100%;
-                margin-top: 30%;
-
+                top: 2.8%;
+                height: 30%;
+                background-color: #b0b0b0;
+                color: #ffffff;
             }
+
             .italics {
                 left: 5%;
                 position: relative;
                 font-family: 'Times New Roman', Times, serif;
                 font-style: italic;
             }
+
             .flip-box {
                 background-color: transparent;
                 height: 200px;
@@ -260,18 +304,25 @@
                 perspective: 1000px;
                 position: absolute;
                 width: 33%;
+                z-index: 12;
             }
+
             .flip-box-inner {
                 position: relative;
                 width: 100%;
                 height: 100%;
-                text-align: center;
                 transition: transform 0.8s;
                 transform-style: preserve-3d;
             }
+
+            .flip-box-inner h2 {
+                text-align: center;
+            }
+
             .flip-box:hover .flip-box-inner {
                 transform: rotateY(180deg);
             }
+
             .flip-box-front, .flip-box-back {
                 position: absolute;
                 width: 100%;
@@ -279,61 +330,175 @@
                 -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
             }
+
+            .flip-box-back p, .flip-box-back span{
+                margin: 5px;
+            }
+
+            .flip-box-back span {
+                font-size: small;
+            }
+
             .flip-box-front {
                 background-color: #b0b0b0;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
             }
+
             .flip-box-back {
                 background-color: #313d5a;
                 color: white;
                 transform: rotateY(180deg);
             }
+
             .vertical, .vertical:hover {
                 transform: rotateX(180deg) !important;
             }
+            
             .rachael {
                 background-image: url("./data/img/users/fullBody/rachael.jpg");
             }
+
             .chris {
                 background-image: url("./data/img/users/fullBody/chris.jpg");
             }
+
             .yublan {
                 background-image: url("./data/img/users/fullBody/yublan.jpg");
             }
+
             .white {
                 color: #ffffff;
             }
+            
             .bottom {
                 position: absolute;
                 top: 60%;
-                width: 60%;
+                width: fit-content;
+                padding-right: 15px;
                 background-color: rgba(0, 0, 0, 0.5);
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 border-top-left-radius: 0px;
                 border-bottom-left-radius: 0px;
             }
+
+            .icon-icon7 {
+                filter: invert(.5) brightness(2);
+            }
+
             .push {
                 position: relative;
-                top: 220px;
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                height: 220px;
+                z-index: 1;
             }
+
+            .desktop {
+                display: block;
+            }
+
+            .mobile {
+                display: none;
+            }
+
+            .desktop, .mobile {
+                z-index: 1;
+                width: 100%;
+                height: fit-content;
+            }
+
+            .advert-img {
+                height: 100%;
+                width: 100%;
+            }
+
+            .mobile-1 {
+                width: 100%;
+                background-color: transparent;
+                height: 200px;
+                position: relative;
+                margin-top: 10px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+            }
+
+            .mobile-2 {
+                width: 65%;
+                left: 35%;
+                position: relative;
+                height: 100%;
+                top: 0%;
+            }
+
+            .icon-icon-pfp {
+                width: 30%;
+                height: 100%;
+                position: absolute;
+            }            
+
+            .small {
+                font-size: medium;
+            }
+
+            bold {
+                font-weight: bold;
+            }
+
+            bold[red] {
+                color: #ff0000
+            }
+
+            bold[green] {
+                color: #00ff00;
+            }
+
+            .image_container {
+                position: relative;
+                width: 100%;
+                height: 250px;
+            }
+
+            .img-graph-1, .img-graph-2 {
+                position: absolute;
+                width: 49%;
+                height: 100%;
+                top: 0%;
+                bottom: 0%;
+            }
+
+            .img-graph-1 {
+                left: 0%;
+                right: 51%;
+            }
+
+            .img-graph-2 {
+                left: 51%;
+                right: 0%;
+            }
+
             @media (max-width: 500px) {
                 span, p {
                     font-size: large;
                 }
             }
+
             @media (max-width: 800px) {
                 .sign-up {
                     position: relative;
-                    top: 250px;
+                    top: 5px;
                     width: 90%;
                     right: 5%;
                     left: 5%;
                     float: none;
                     margin-bottom: 15px;
+                    height: fit-content;
                 }
+
                 .container {
                     position: relative;
                     width: 90%;
@@ -341,6 +506,7 @@
                     right: 5%;
                     height: fit-content;
                 }
+
                 /*.flip-box {
                     position: relative;
                     width: 100%;
@@ -349,9 +515,32 @@
                 div.one, div.two, div.three {
                     left: none !important;
                 }*/
+
+                .desktop {
+                    display: none;
+                }
+
+                .mobile {
+                    display: block;
+                }
+
                 h1 {
                     top: 3%;
                 }
+                
+                .quotes {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    height: fit-content;
+                }
+
+                .advert-img {
+                    height: 220px;
+                    width: 100%;
+                }
+
                 .italics {
                     display: none;
                 }
@@ -361,13 +550,13 @@
     <body>
         <inline>
             <profile>
-                <h1>Pantheon <img src="./data/img/svg/favicon.svg" class="icon-icon-favicon" alt="icon"></h1>
+                <h1>Pantheon <img src="./data/img/svg/favicon.svg" class="icon-icon-inline icon-icon-favi" alt="icon"></h1>
                 <span class="italics"></br>"Never be alone again"</span>
                 <inset>
                     <div class="container">
                         <p>Hi! We're so glad you're here-- quality recruits are at the waiting!</p>
                         <video class="video" controls>
-
+                            <source src="./data/img/stats/advert.mp4" type="video/mp4">
                         </video>
                         <h2>What is "Rent-A-Guy?"</h2>
                         <p>We thought that the name would be a giveaway, but in case we really need it, "Rent-A-Guy", owned and developed by parent company "Pantheon", is a social-networking app designed with the user in mind. 
@@ -375,48 +564,98 @@
                         </br></br> Ready to try? <a href="./auth/index.html?from_home=true" target="_self">Click here</a> to use our Finder™ Technology and start your ✨ experience ✨. 
                         </br>Still Anxious? Scroll down to learn more..</p>
                         <h2>Business Marketing Plan...</h2>
-                        <p>Our product can be accessed (and purchased) online via the App store, Google Play store, and this website!</p>
+                        <p>Our product can be accessed (and purchased) online via the App store, Google Play store, and this website!</br></br>
+                        <bold>Sales Price</bold>: Avg product transactions : $15-$450/wk (10% commision + misc fees & adverts) $2-$60/wk</br></br>
+                        <bold>Cost</bold>: $1.2/customer (10% ctr, 83% sign-up rate) (advert-cost per person) (~$1.66/hr total spent)</br></br>
+                        To keep the app online each year, it costs $125/year (licensing fees), plus more for advertisements up to $1200/mo, upkeep, and monthly maintenance for the best user experience, totaling to <bold>~$1.66/hr.</bold></br></br> 
+                        <bold>Profit</bold>: At ~232.4 customers per week, 0.5% customer leave per month tax rate of 6% and they still have cost of $1.20/week and an average transaction cost of $30.00, where profits at week 797 around 38,3766 per <bold>week</bold>, while customer <bold>gains</bold> are around 68,225 per <bold>week</bold>.</br></br>
+                        Customer Graph <bold red>(in red)</bold>: f\left(x\right)=0.995^{\frac{1}{4}x}\cdot232.4x </br>
+                        Profit Graph <bold green>(in green)</bold>: y=0.94\frac{f\left(x\right)}{1.6}\cdot3\ -1.2f\left(x\right) </br></p>
+                        <div class="image_container">
+                            <img src="./data/img/stats/customer_graph.png" class="img-graph-1" alt="img-graph-1">
+                            <img src="./data/img/stats/profits_graph.png" class="img-graph-2" alt="img-graph-2">
+                        </div>
                         <h2>Contact Information</h2>
-                        <div class="flip-box one">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front rachael">
-                                    <center>
-                                        <h2 class="white bottom">Rachael</h2>
-                                    </center>
+                        <div class="desktop">
+                            <div class="flip-box one">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front rachael">
+                                        <center>
+                                            <h2 class="white bottom">Rachael</h2>
+                                        </center>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <h2 class="white">Rachael <a href="https://www.github.com" target="_blank"><img src="./data/img/svg/github.svg" class="icon-icon-inline icon-icon7" alt="icon"></a><a href="https://www.example.com" target="_blank"><img src="./data/img/svg/link.svg" style="margin-left: 5px" class="icon-icon-inline icon-icon7" alt="icon"></a></h2>
+                                        <p class="white">Head in design and Founder of Pantheon, also leader of advertisment deparment.</p>
+                                        <span><a href="tel:+16054756968"><img src="./data/img/svg/phone.svg" class="icon-icon-inline icon-icon7" alt="icon"></a> (605) 475-6968</span></br>
+                                        <span><a href="mailto:rachael@pantheon.net"><img src="./data/img/svg/envelope.svg" class="icon-icon-inline icon-icon7" alt="icon"></a> rachael@pantheon.net</span>
+                                    </div>
                                 </div>
-                                <div class="flip-box-back">
-                                    <h2 class="white">Rachael</h2>
-                                    <p class="white">Description coming soon... (i hope)</p>
+                            </div>
+                            <div class="flip-box two">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front chris">
+                                        <center>
+                                            <h2 class="white bottom">Chris</h2>
+                                        </center>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <h2 class="white">Chris <a href="https://www.github.com/EeveeCo" target="_blank"><img src="./data/img/svg/github.svg" class="icon-icon-inline icon-icon7" alt="icon"></a><a href="https://www.example.com" target="_blank"><img src="./data/img/svg/link.svg" style="margin-left: 5px" class="icon-icon-inline icon-icon7" alt="icon"></a></h2>
+                                        <p class="white">Financial advisor and accountant for Pantheon, manages invesments and creates company reports.</p>
+                                        <span><a href="tel:+16053134000"><img src="./data/img/svg/phone.svg" class="icon-icon-inline icon-icon7" alt="icon"></a> (605) 313-4000</span></br>
+                                        <span><a href="mailto:chris@pantheon.net"><img src="./data/img/svg/envelope.svg" class="icon-icon-inline icon-icon7" alt="icon"></a> chris@pantheon.net</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-box three">
+                                <div class="flip-box-inner">
+                                    <div class="flip-box-front yublan">
+                                        <center>
+                                            <h2 class="white bottom">Yuvan</h2>
+                                        </center>
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <h2 class="white">Yuvan <a href="https://www.github.com/superkidsyuvan" target="_blank"><img src="./data/img/svg/github.svg" class="icon-icon-inline icon-icon7" alt="icon"></a><a href="https://www.example.com" target="_blank"><img src="./data/img/svg/link.svg" style="margin-left: 5px" class="icon-icon-inline icon-icon7" alt="icon"></a></h2>
+                                        <p class="white">Chief Programmer and co-founder of Pantheon, Head in IT department and customer support.</p>
+                                        <span><a href="tel:+12484345508"><img src="./data/img/svg/phone.svg" class="icon-icon-inline icon-icon7" alt="icon"></a> (248) 434-5508</span></br>
+                                        <span><a href="mailto:rachael@pantheon.net"><img src="./data/img/svg/envelope.svg" class="icon-icon-inline icon-icon7" alt="icon"></a> rachael@pantheon.net</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="push"></div>
+                        </div>
+                        <div class="mobile">
+                            <h2>Rachael <a href="https://www.github.com" target="_blank"><img src="./data/img/svg/github.svg" class="icon-icon-inline" alt="icon"></a><a href="https://www.example.com" target="_blank"><img src="./data/img/svg/link.svg" style="margin-left: 5px" class="icon-icon-inline" alt="icon"></a></h2>
+                            <div class="mobile-1">
+                                <img src="./data/img/users/fullBody/rachael.jpg" class="icon-icon-pfp" alt="icon">
+                                <div class="mobile-2">
+                                    <span>Head in design and Founder of Pantheon, also leader of advertisment deparment.</span></br>
+                                    <span class="small"><a href="tel:+16054756968"><img src="./data/img/svg/phone.svg" class="icon-icon-inline" alt="icon"> (605) 475-6968</span></a></br>
+                                    <span class="small"><a href="mailto:rachael@pantheon.net"><img src="./data/img/svg/envelope.svg" class="icon-icon-inline" alt="icon"> rachael@pantheon.net</span></a>
+                                </div>
+                            </div>
+                        </br>
+                            <h2>Chris <a href="https://www.github.com/EeveeCo" target="_blank"><img src="./data/img/svg/github.svg" class="icon-icon-inline" alt="icon"></a><a href="https://www.example.com" target="_blank"><img src="./data/img/svg/link.svg" style="margin-left: 5px" class="icon-icon-inline" alt="icon"></a></h2>
+                            <div class="mobile-1">
+                                <img src="./data/img/users/fullBody/chris.jpg" class="icon-icon-pfp" alt="icon">
+                                <div class="mobile-2">
+                                    <span>Financial advisor and accountant for Pantheon, manages invesments and creates company reports.</span></br>
+                                    <span class="small"><a href="tel:+16054756968"><img src="./data/img/svg/phone.svg" class="icon-icon-inline" alt="icon"> (605) 475-6968</span></a></br>
+                                    <span class="small"><a href="mailto:chris@pantheon.net"><img src="./data/img/svg/envelope.svg" class="icon-icon-inline" alt="icon"> chris@pantheon.net</span></a>
+                                </div>
+                            </div>
+                        </br>
+                            <h2>Yuvan <a href="https://www.github.com/superkidsyuvan" target="_blank"><img src="./data/img/svg/github.svg" class="icon-icon-inline" alt="icon"></a><a href="https://www.example.com" target="_blank"><img src="./data/img/svg/link.svg" style="margin-left: 5px" class="icon-icon-inline" alt="icon"></a></h2>
+                            <div class="mobile-1" style="margin-bottom: 10px;">
+                                <img src="./data/img/users/fullBody/yublan.jpg" class="icon-icon-pfp" alt="icon">
+                                <div class="mobile-2">
+                                    <span>Chief Programmer and co-founder of Pantheon, Head in IT department and customer support.</span></br>
+                                    <span class="small"><a href="tel:+16054756968"><img src="./data/img/svg/phone.svg" class="icon-icon-inline" alt="icon"> (605) 475-6968</span></a></br>
+                                    <span class="small"><a href="mailto:yuvan@pantheon.net"><img src="./data/img/svg/envelope.svg" class="icon-icon-inline" alt="icon"> yuvan@pantheon.net</span></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="flip-box two">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front chris">
-                                    <center>
-                                        <h2 class="white bottom">Chris</h2>
-                                    </center>
-                                </div>
-                                <div class="flip-box-back">
-                                    <h2 class="white">Chris</h2>
-                                    <p class="white">Description coming soon... (i pray)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flip-box three">
-                            <div class="flip-box-inner">
-                                <div class="flip-box-front yublan">
-                                    <center>
-                                        <h2 class="white bottom">Yuvan</h2>
-                                    </center>
-                                </div>
-                                <div class="flip-box-back">
-                                    <h2 class="white">Yuvan</h2>
-                                    <p class="white">Description coming soon... (i fear)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="push">Please invest in our company (we beg) 🙏🙏🙏 </br>...Why are we still reading? Go invest.</p>
+                        <p>We request that you be the change, that you invest <bold>$20,000 for 10%</bold> of our company </br>...Why are we still reading? Go invest (and make millions 🤑).</p>
                     </div>
                     <div class="sign-up">
                         <div class="header">
@@ -427,7 +666,9 @@
                         </div>
                         <button class="employer filled">Employee Signup</button>
                         <button class="employer hollow">Employer Signup</button>
-                        <!--<canvas class="quotes">Plz update ur browser</canvas>/!-->
+                        <div class="quotes">
+                            <img src="./data/img/stats/print_advert.png" alt="icon.advert"  class="advert-img">
+                        </div>
                     </div>
                 </inset>
             </profile>

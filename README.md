@@ -24,6 +24,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+urlencoding = "*"
 
 ```
 
@@ -36,7 +37,7 @@ or, alternatively, you can visit the github pages version [here](https://superki
 
 shark tank *"exists"*
 
-will be updated **(frequently)**
+will be updated ~~frequently~~ **not** (unless i feel like it) *#submitted* (pray for us)
 
 no i will not comment my code stop asking
 

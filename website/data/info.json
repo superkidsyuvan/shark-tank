@@ -20,9 +20,10 @@
     "3" : {
         "name" : "yublanathan",
         "description" : "Chief Programmer and co-founder of Pantheon, Head in IT department and customer support.",
-        "desc_elaborate" : "umm basically a weird computer nerd i guess",
+        "desc_elaborate" : "uhmm basically a weird computer nerd i guess",
         "one_word_descriptor" : "tank",
         "image" : "../data/img/users/fullBody/yublan.jpg",
+        "closeUp" : "../data/img/users/closeUp/yublan.jpg",
         "stats" : "../data/img/users/stats/yublan_st.png",
         "pantheon" : true
     },
@@ -102,6 +103,13 @@
         "description" : "#bestseller",
         "closeUp" : "../data/img/users/closeUp/katie.jpg",
         "image" : "../data/img/users/fullBody/katie.jpg",
+        "pantheon" : false
+    },
+    "15" : {
+        "name" : "Izzy",
+        "description" : "I will PAY YOU to rent me... (-$0.05/hr)",
+        "closeUp" : "../data/img/users/closeUp/izzy.jpg",
+        "image" : "../data/img/users/fullBody/izzy.jpg",
         "pantheon" : false
     }
 }

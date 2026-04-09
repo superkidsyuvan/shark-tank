@@ -1,3 +1,11 @@
+# REVIVIALL MWAHAHAHAHA
+
+ill make a real READ.md later or smth but it's like midnight rn and i would like to sleep thank you very much
+
+yes im reusing this for a different assignment like a year later
+
+no we do not ask questions
+
 # shark tank!!! 🦈
 *yes, this is a school project.*
 

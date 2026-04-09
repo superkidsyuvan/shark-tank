@@ -6,7 +6,8 @@
         "one_word_descriptor" : "glass cannon",
         "image" : "../data/img/users/fullBody/chris.jpg",
         "stats" : "../data/img/users/stats/chris_st.png",
-        "pantheon" : true
+        "pantheon" : true,
+        "extendedBioBoolean" : false
     },
     "2" : {
         "name" : "rachael",
@@ -15,7 +16,8 @@
         "one_word_descriptor" : "bomber",
         "image" : "../data/img/users/fullBody/rachael.jpg",
         "stats" : "../data/img/users/stats/rachael_st.png",
-        "pantheon" : true
+        "pantheon" : true,
+        "extendedBioBoolean" : false
     },
     "3" : {
         "name" : "yublanathan",
@@ -25,7 +27,8 @@
         "image" : "../data/img/users/fullBody/yublan.jpg",
         "closeUp" : "../data/img/users/closeUp/yublan.jpg",
         "stats" : "../data/img/users/stats/yublan_st.png",
-        "pantheon" : true
+        "pantheon" : true,
+        "extendedBioBoolean" : false
     },
     "4" : {
         "name" : "The Pantheon© Team",
@@ -33,7 +36,8 @@
         "desc_elaborate" : "hi!",
         "one_word_descriptor" : "group... probably",
         "image" : "../data/img/users/fullBody/group.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "5" : {
         "name" : "luo 🦉",
@@ -41,75 +45,163 @@
         "desc_elaborate" : "Si no practicas, ya verás lo que sucede",
         "one_word_descriptor" : "español",
         "image" : "../data/img/users/fullBody/duo.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "6" : {
         "name" : "Hank",
         "description" : "This is a description",
         "image" : "../data/img/users/fullBody/hank.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "7" : {
         "name" : "The Battle of Lexington & Concord",
         "description" : "This is a description",
         "image" : "../data/img/users/fullBody/lexington.jpg",
         "closeUp" : "../data/img/users/closeUp/lexi.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "8" : {
         "name" : "Avid",
         "description" : "The IT guy",
         "closeUp" : "../data/img/users/closeUp/adiv.jpg",
         "image" : "../data/img/users/fullBody/avid.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "9" : {
         "name" : "Zach",
         "description" : "This is a description",
         "closeUp" : "../data/img/users/closeUp/zach.jpg",
         "image" : "../data/img/users/fullBody/zach.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "10" : {
         "name" : "Alzheimer's",
         "description" : "hello my name is uhh uhhh my name is uhh i like long beach 🪼🪼🪼",
         "closeUp" : "../data/img/users/closeUp/alzheimer.jpg",
         "image" : "../data/img/users/fullBody/alzheimer.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "11" : {
         "name" : "Dementia",
         "description" : "hi my name is Whitten hi my name is Whitten hi my name is Whitten",
         "closeUp" : "../data/img/users/closeUp/dementia.jpg",
         "image" : "../data/img/users/fullBody/dementia.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "12" : {
         "name" : "Schizophrenia",
         "description" : "...I should be put in a mental asylum 🤪",
         "closeUp" : "../data/img/users/closeUp/schizophrenia.jpg",
         "image" : "../data/img/users/fullBody/schizophrenia.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "13" : {
         "name" : "Avid 2.0",
         "description" : "I'm not doing drugs (totally)",
         "closeUp" : "../data/img/users/closeUp/avid2.jpg",
         "image" : "../data/img/users/fullBody/avid2.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "14" : {
         "name" : "Katy",
         "description" : "california girls we're unforgettable",
         "closeUp" : "../data/img/users/closeUp/katy.jpg",
         "image" : "../data/img/users/fullBody/katy.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
     },
     "15" : {
         "name" : "Izzy",
         "description" : "I will PAY YOU to rent me... (-$0.05/hr)",
         "closeUp" : "../data/img/users/closeUp/izzy.jpg",
         "image" : "../data/img/users/fullBody/izzy.jpg",
-        "pantheon" : false
+        "pantheon" : false,
+        "extendedBioBoolean" : false
+    },
+    "16" : {
+        "name" : "Maximillien",
+        "description" : "It's a long story... ",
+        "closeUp" : "../data/img/users/closeUp/maximilian.png",
+        "image" : "../data/img/users/fullBody/maximilian.png",
+        "pantheon" : false,
+        "extendedBioBoolean" : true,
+        "extendedBio" : {
+            "isEmployer" : true,
+            "Tags" : [
+                ["30-39", "Text Evidence: 'xyz'"],
+                ["Tall", "Text Evidence:"],
+                ["Slender", "Text Evidence:"],
+                ["Socially Active", "Text Evidence:"],
+                ["It's Complicated", "Text Evidence:"],
+                ["Sugar Daddy", "Text Evidence:"]
+            ],
+            "Sections"  : [
+                { 
+                    "Title" : "Motivations",
+                    "Description" : "Motivated by love for my newly wed wife, Valentine, and her bequest for the rightly begrudged Noitier. Looking for a caretaker whilst we partake in our honeymoon on the outskirts of Barcelona.",
+                    "textEvidence" : "He’d die for Valentine, and she’d deign to “[oppose her]…grandfather” (288). As wealthy newlyweds in France, it’s only right to take care of one so fierce to oppose: he’s one to thank for her life, after all."
+                },
+                { 
+                    "Title" : "Behavior",
+                    "Description" : "Others might call me “emotionally manipulative,” but they also call me an “honest man.” Kinda crazy how the world works like that, huh? Do by me well and you’ll never fall witness to a bad day again.",
+                    "textEvidence" : "One day he’s all about not “risk[ing] salvation,” and the next he’s threatening “acts of madness” in the plight that is a loveless life (295-525). In all of this, the Count sees himself in Morrell, and describes him in humble, honest manner. Strange how the world works, doesn’t it?"
+                },
+                { 
+                    "Title" : "Personal and Cultural Background",
+                    "Description" : "Born Parisian, raised Parisian. Son of the Morrell (and heir) trading company, an exquisite— and lucrative– business…you wouldn’t believe the fortune I’ve amassed!",
+                    "textEvidence" : "Manipulative, in a sense, Maximillen bends the truth whether in ends in “maternal...cri[es,]” or “[paternal] dishonor” in order not to raise suspicion to his massive fortune (126-128). "
+                },
+                { 
+                    "Title" : "Passions and Interests",
+                    "Description" : "Valentine.",
+                    "textEvidence" : "He’s risked it all for her: his family, his honor, and “[his] soul” (526). A man with such a forthright passion and devotion calls for such a blunt answer. "
+                },
+                { 
+                    "Title" : "Job Skills",
+                    "Description" : "From backgrounds in the military, my strong work ethic really shines in the most compromising of situations. ",
+                    "textEvidence" : "Morrel’s expert leadership skills and strong work ethic from the military life let him accomplish the most daunting of feats, whether it be “saving,” or more ironically, “kill[ing]” a life (164-289)."
+                },
+                { 
+                    "Title" : "Expertise",
+                    "Description" : "I’ve learned a thing or two from my time in the military—and my father. Swordfighting, logistics, and planning a nice sail with friends.",
+                    "textEvidence" : "While not explicitly mentioned, his close connections to his parents –being there in their most vulnerable moments, “[their] cri[es]– make him intimately familiar with the industry, his know-how almost flawless (126)."
+                },
+                { 
+                    "Title" : "Key events",
+                    "Description" : "The staging of my fiance’s (now wife) death without a trace of my volition or awareness sure took a toll on me. That, and the fortune I’ve stacked up from that Nigerian Prince.",
+                    "textEvidence" : "Alluding the Nigerian Prince to Edmond Dantes, Maximilien would “see [Valentine] at any cost,” even if it meant taking himself to the grave (291)."
+                },
+                { 
+                    "Title" : "Philosophy",
+                    "Description" : "I believe that I am now, at the wisdom of that Nigerian Prince, am most adherent to the principles of Virtue Theory. ",
+                    "textEvidence" : "From being financially-focused with a “modest fortune” from the beginning to a humble man willing to pledge it all to repent– he realizes all human truth lies in the act to “wait and hope” (531). To wish for a better future –to the benefit of all– and to align oneself with such future. "
+                },
+                { 
+                    "Title" : "Kohlberg's Moral Development",
+                    "Description" : "I am a honor driven man. Even at the vehement revocations of the ones I hold dearest, I do what society sets me out to do– be a man– even at the cost of those pesky laws. I am at a proud stage three on the Kohlberg scale, and I stand by it.",
+                    "textEvidence" : "In social dilemmas, Morrell claims himself to the standard of “the most honor[able] man…in France,” even if it means killing himself (289). "
+                },
+                { 
+                    "Title" : "Personality Type",
+                    "Description" : "My wife tells me that I'm “such a five with a four wing---textbook iconoclast.” Whatever that means.",
+                    "textEvidence" : "goes after description DOES NOT SUPPORT HTML TAGS"
+                },
+                { 
+                    "Title" : "Extra Info",
+                    "Description" : "Can we talk about how many hoops I needed to jump through to hire a babysitter",
+                    "textEvidence" : "Begruding"
+                }
+            ],
+            "endCredits" : "Please apply—I need a babysitter ASAP!!! GRATITIOUS COMPENSATION!!"
+        }
     }
 }
